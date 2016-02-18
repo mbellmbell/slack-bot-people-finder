@@ -1,0 +1,22 @@
+{
+  "apps": [{
+    "name": "SLACK-BOT",
+    "script": "index.js",
+    "instances": 1,
+    "node_args": "--expose-gc",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }],
+  "deploy": {
+    "slackbot_production": {
+      "user": "ubuntu",
+      "host": "54.84.39.19",
+      "key": "instance.key",
+      "ref": "origin/master",
+      "repo": "git@github.com:mmm3bbb/slack-bot-people-finder.git",
+      "path": "~/slack-bot-people-finder",
+      "post-deploy": "source ~/.nvm/nvm.sh && npm i && pm2 startOrRestart deploy/ecosystem.json --env production"
+    }
+  }
+}
