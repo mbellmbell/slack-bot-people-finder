@@ -8,7 +8,8 @@ let config = {
       WEBHOOK_URL: 'https://hooks.slack.com/services/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',
       CHANNEL: 'general',
       BOT_NAME: 'Emailfinder Bot',
-      API_TOKEN: 'xoxp-21459716064-21459923766-21466998982-b015a2e4ec'
+      API_TOKEN: 'xoxp-21459716064-21459923766-21466998982-b015a2e4ec',
+      EMAILFINDER_URL: 'http://54.84.39.19:9080/'
     }
   }
 }
